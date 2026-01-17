@@ -3,10 +3,9 @@ import java.time.LocalDate;
 public class HotelChain {
 
     public Reservation makeReservation(Hotel hotel,
-                                       LocalDate startDate,
-                                       LocalDate endDate,
-                                       int number) {
-
+            LocalDate startDate,
+            LocalDate endDate,
+            int number) {
         if (!canMakeReservation(hotel)) {
             throw new IllegalStateException("Cannot make reservation");
         }

@@ -12,7 +12,7 @@ public class Reservation {
             LocalDate endDate,
             int number) {
 
-        if (!endDate.isAfter(startDate)) {
+        if (startDate == null || endDate == null || !endDate.isAfter(startDate)) {
             throw new IllegalArgumentException("Invalid reservation dates");
         }
 
@@ -25,7 +25,6 @@ public class Reservation {
     public static Reservation create(LocalDate startDate,
             LocalDate endDate,
             int number) {
-
         return new Reservation(LocalDate.now(), startDate, endDate, number);
     }
 }
