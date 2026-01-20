@@ -21,7 +21,7 @@ public class HotelChainTest {
     @Test
     void checkInAndCheckOutGuest() {
         HotelChain chain = new HotelChain();
-        Room room = new Room(101);
+        Room room = new Room(101, "Deluxe");
         Guest guest = Guest.create("Ali", "Lahore");
 
         chain.checkInGuest(room, guest);
