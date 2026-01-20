@@ -7,7 +7,7 @@ public class HotelTest {
     @Test
     void roomAvailabilityCheckedCorrectly() {
         Hotel hotel = new Hotel("PC");
-        Room room = new Room(101);
+        Room room = new Room(101, "Deluxe");
 
         assertTrue(hotel.available(room));
 

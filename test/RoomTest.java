@@ -5,20 +5,20 @@ public class RoomTest {
 
     @Test
     void roomInitiallyNotOccupied() {
-        Room room = new Room(101);
+        Room room = new Room(101, "Deluxe");
         assertFalse(room.isOccupied());
     }
 
     @Test
     void guestOccupiesRoom() {
-        Room room = new Room(101);
+        Room room = new Room(101, "Deluxe");
         room.createGuest(Guest.create("Ali", "Lahore"));
         assertTrue(room.isOccupied());
     }
 
     @Test
     void secondGuestNotAllowed() {
-        Room room = new Room(101);
+        Room room = new Room(101, "Deluxe");
         room.createGuest(Guest.create("Ali", "Lahore"));
 
         assertThrows(IllegalStateException.class,
